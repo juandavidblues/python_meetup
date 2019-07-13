@@ -1,0 +1,15 @@
+{% extends 'usuarios/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="mx-5 my-5">
+<form method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <div class="button-group">
+        <button type="submit" class="btn btn-primary">Crear</button>
+        <a class="btn btn-secondary" href="{% url 'mensajes:listar' %}">Cancelar</a>
+    </div>
+    
+</form>
+</div>
+{% endblock %}

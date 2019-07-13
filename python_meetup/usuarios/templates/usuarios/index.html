@@ -1,0 +1,12 @@
+{% extends 'usuarios/base.html' %}
+{% block content %}
+
+<div class="mx-5 my-5">
+    <h2>Aplicacion De Mensajes</h2>
+    <hr>
+    <a class="btn btn-primary" href="{% url 'mensajes:crear' %}">Crear Mensaje</a>
+    <a class="btn btn-secondary" href="{% url 'mensajes:listar' %}">Listar Mensajes</a>
+    <a class="btn btn-success" href="{% url 'usuarios:logout' %}">Salir</a>
+</div>
+
+{% endblock %}
